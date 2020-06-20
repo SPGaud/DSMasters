@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Till System</title>
+<link rel="stylesheet" type="text/css" href="/till.css">
+<script src="/till.js"></script>
+</head>
+<body style="margin:0;padding:8px;background-color:#ccc;" onload="pos_start(2);">
+<div class="wrapper">
+  <div class="box dark ca10 ra1 big" id="title">Till System</div>
+
+
+  <div class="box dark ca1 rb1 three" onclick="pos_program(44)";>Panini Roast Beef Melt</div>
+  <div class="box dark cb1 rb1 three" onclick="pos_program(45)";>Panini BBQ Chk+Ham Cheddar</div>
+  <div class="box dark cc1 rb1 three" onclick="pos_program(46)";>Panini Goat's Cheese Med. Veg</div>
+  <div class="box dark ca1 rc1 three" onclick="pos_program(47)";>Panini Tuna Melt</div>
+  <div class="box dark cb1 rc1 three" onclick="pos_program(48)";>Panini Bacon, Brie, Cranberry</div>
+  <div class="box dark cc1 rc1 three" onclick="pos_program(49)";>Panini Mushroom Melt</div>
+
+  <div class="box dark ce1 rb1 three" onclick="pos_program(50)";>Salad Tuna</div>
+  <div class="box dark ce1 rc1 three" onclick="pos_program(51)";>Salad Mezze Platter</div>
+  <div class="box dark ce1 rd1 three" onclick="pos_program(52)";>Salad Greek Feta</div>
+
+  <div class="box dark ca1 re1 three" onclick="pos_program(53)";>Sandwich Ham and Pickle</div>
+  <div class="box dark cb1 re1 three" onclick="pos_program(54)";>Sandwich Ham and Cheese</div>
+  <div class="box dark cc1 re1 three" onclick="pos_program(55)";>Sandwich B.L.T.</div>
+
+  <div class="box dark ca1 rf1 three" onclick="pos_program(56)";>Sandwich Bacon and Brie</div>
+  <div class="box dark cb1 rf1 three" onclick="pos_program(57)";>Sandwich Roast Beef</div>
+  <div class="box dark cc1 rf1 three" onclick="pos_program(58)";>Sandwich Chicken Tikka</div>
+
+  <div class="box dark ca1 rg1 three" onclick="pos_program(59)";>Sandwich Chicken and Sweetcorn</div>
+  <div class="box dark cb1 rg1 three" onclick="pos_program(60)";>Sandwich Chicken Salad</div>
+  <div class="box dark cc1 rg1 three" onclick="pos_program(61)";>Sandwich Pulled Pork</div>
+
+  <div class="box dark ca1 rh1 three" onclick="pos_program(62)";>Sandwich Egg Mayo</div>
+  <div class="box dark cb1 rh1 three" onclick="pos_program(63)";>Sandwich Tuna Salad</div>
+  <div class="box dark cc1 rh1 three" onclick="pos_program(64)";>Sandwich Cheese and Onion</div>
+
+  <div class="box light ca1 rj1 two" onclick="pos_page(1);">Drinks and Snacks</div>
+  <div class="box light cb1 rj1 two" onclick="pos_page(2);">Sandwiches</div>
+
+
+  <div class="box red cf1 rb1 one" onclick="pos_clr();">VOID</div>
+  <div class="box green cf1 rc1 one" onclick="pos_tender(2000);">&pound;20</div>
+  <div class="box green cf1 rd1 one" onclick="pos_tender(1000);">&pound;10</div>
+  <div class="box green cf1 re1 one" onclick="pos_tender(500);">&pound;5</div>
+  <div class="box green cf1 rf1 one" onclick="pos_tender(100);">&pound;1</div>
+  <div class="box dark cf1 rg1 one">&nbsp;</div>
+  <div class="box dark cf1 rh1 one" onclick="pos_refund();">REFUND</div>
+  <div class="box dark cf1 ri1 one" onclick="pos_num();">NUM</div>
+  <div class="box dark cf1 rj1 one" onclick="pos_plu();">PLU</div>
+
+  <div class="lbox light cg4 rb4 left"><div class="target" id="target"></div><div class="rstate2" id="rstate2"></div><div class="lstate1" id="lstate1"></div><div class="lstate2" id="lstate2"></div></div>
+  <div class="rbox light cg4 rf1"><input class="ins" id="ins" onkeydown="if(event.keyCode==13){pos_plu()};"></input></div>
+
+  <div class="box mid cg1 rg1 big" onclick="pos_digit(7);">7</div>
+  <div class="box mid cg1 rh1 big" onclick="pos_digit(4);">4</div>
+  <div class="box mid cg1 ri1 big" onclick="pos_digit(1);">1</div>
+  <div class="box mid cg1 rj1 big" onclick="pos_point();">.</div>
+
+
+  <div class="box mid ch1 rg1 big" onclick="pos_digit(8);">8</div>
+  <div class="box mid ch1 rh1 big" onclick="pos_digit(5);">5</div>
+  <div class="box mid ch1 ri1 big" onclick="pos_digit(2);">2</div>
+  <div class="box mid ch1 rj1 big" onclick="pos_digit(0);">0</div>
+
+  <div class="box mid ci1 rg1 big" onclick="pos_digit(9);">9</div>
+  <div class="box mid ci1 rh1 big" onclick="pos_digit(6);">6</div>
+  <div class="box mid ci1 ri1 big" onclick="pos_digit(3);">3</div>
+  <div class="box mid ci1 rj1 big" onclick="pos_digit(100);">00</div>
+
+  <div class="box yellow cj1 rg1 one" onclick="pos_local_clr();">CLR</div>
+  <div class="box green cj1 rh1 one" onclick="pos_cash(3);">CREDIT</div>
+  <div class="box green cj1 ri1 one" onclick="pos_cash(2);">DEBIT</div>
+  <div class="box green cj1 rj1 one" onclick="pos_cash(1);">CASH</div>
+</div>
+</body>
+</html>

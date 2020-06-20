@@ -1,0 +1,126 @@
+body {
+font-family: sans-serif;
+}
+
+.wrapper {
+        display: grid;
+    	grid-gap: 5px;
+        grid-auto-columns: 100px;
+        grid-auto-rows: 60px;
+        background-color: #ccc;
+        color: #444;
+    }
+
+
+.box {
+        border-radius: 6px;
+	margin:0;
+	text-align:center;
+	padding:4px;
+    }
+
+.lbox {
+        border-radius: 6px;
+	margin:0;
+	text-align:left;
+	padding:4px;
+    }
+
+.rbox {
+        border-radius: 6px;
+	margin:0;
+	text-align:right;
+	padding:4px;
+    }
+
+.big {font-size:250%;padding:8px;}
+
+.ins {font-size:250%;padding:4;margin:0;width:390px;text-align:right;border:0px solid;outline:none;}
+
+.one {padding-top:22px;}
+
+.two {padding-top:12px;}
+
+.three {padding-top:4px;}
+
+.dark {
+	color:#fff;
+        background-color: #444;
+}
+
+.light {
+	color:#000;
+        background-color: #fff;
+}
+
+.mid {
+	color:#000;
+        background-color: #777;
+}
+
+.red {
+	color:#000;
+        background-color: #f33;
+}
+
+.yellow {
+	color:#000;
+        background-color: #ff3;
+}
+
+.green {
+	color:#000;
+        background-color: #7f7;
+}
+
+.lstate1 {
+margin:2px;
+}
+
+.lstate2 {
+margin:2px;
+}
+
+.rstate2 {
+float: right;
+font-size:210%;
+margin:2px;
+}
+
+.target {
+font-family: courier, courier new;
+background-color:#eee;
+height:210px;
+overflow-y:scroll;
+}
+
+.ca1 {        grid-column: 1 / span 1;    }
+.cb1 {        grid-column: 2 / span 1;    }
+.cc1 {        grid-column: 3 / span 1;    }
+.cd1 {        grid-column: 4 / span 1;    }
+.ce1 {        grid-column: 5 / span 1;    }
+.cf1 {        grid-column: 6 / span 1;    }
+.cg1 {        grid-column: 7 / span 1;    }
+.ch1 {        grid-column: 8 / span 1;    }
+.ci1 {        grid-column: 9 / span 1;    }
+.cj1 {        grid-column: 10 / span 1;    }
+
+.cg4 {        grid-column: 7 / span 4;    }
+
+.ca10 {        grid-column: 1 / span 10;    }
+
+
+.ra1 {        grid-row: 1 / span 1;    }
+.rb1 {        grid-row: 2 / span 1;    }
+.rc1 {        grid-row: 3 / span 1;    }
+.rd1 {        grid-row: 4 / span 1;    }
+.re1 {        grid-row: 5 / span 1;    }
+.rf1 {        grid-row: 6 / span 1;    }
+.rg1 {        grid-row: 7 / span 1;    }
+.rh1 {        grid-row: 8 / span 1;    }
+.ri1 {        grid-row: 9 / span 1;    }
+.rj1 {        grid-row: 10 / span 1;    }
+
+.rb4 {        grid-row: 2 / span 4;    }
+
+

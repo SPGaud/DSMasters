@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Till System</title>
+<link rel="stylesheet" type="text/css" href="/till.css">
+<script src="/till.js"></script>
+</head>
+<body style="margin:0;padding:8px;background-color:#ccc;" onload="pos_start(1);">
+<div class="wrapper">
+  <div class="box dark ca10 ra1 big" id="title">Till System</div>
+
+  <div class="box dark ca1 rb1 two" onclick="pos_program(1);">Espresso</div>
+  <div class="box dark cb1 rb1 two" onclick="pos_program(2);">Americano</div>
+  <div class="box dark cc1 rb1 two" onclick="pos_program(3);">Latte</div>
+  <div class="box dark cd1 rb1 two" onclick="pos_program(4);">Cappuccino</div>
+  <div class="box dark ce1 rb1 two" onclick="pos_program(5);">Mocha</div>
+
+  <div class="box dark ca1 rc1 two" onclick="pos_program(6);">Hot Chocolate</div>
+  <div class="box dark cb1 rc1 two" onclick="pos_program(7);">English Breakfast Tea</div>
+  <div class="box dark cc1 rc1 two" onclick="pos_program(8);">Red Berry Tea</div>
+  <div class="box dark cd1 rc1 two" onclick="pos_program(9);">Camomile Tea</div>
+  <div class="box dark ce1 rc1 two" onclick="pos_program(10);">Earl Grey Tea</div>
+
+  <div class="box dark ca1 rd1 two" onclick="pos_program(11);">Peppermint Tea</div>
+  <div class="box dark cb1 rd1 two" onclick="pos_program(12);">Green Tea Luponde</div>
+  <div class="box mid cc1 rd1 two" onclick="pos_shift(1,'Small');">Small</div>
+  <div class="box mid cd1 rd1 two" onclick="pos_shift(2,'Medium');">Medium</div>
+  <div class="box mid ce1 rd1 two" onclick="pos_shift(3,'Large');">Large</div>
+
+  <div class="box dark ca1 rf1 two" onclick="pos_program(42);">Ginger Beer 330ml</div>
+  <div class="box dark cb1 rf1 two" onclick="pos_program(38);">Coca Cola 330ml</div>
+  <div class="box dark cc1 rf1 two" onclick="pos_program(39);">Coke Zero 330ml</div>
+  <div class="box dark cd1 rf1 two" onclick="pos_program(40);">Lemonade 330ml</div>
+  <div class="box dark ce1 rf1 two" onclick="pos_program(41);">Diet Coke 330ml</div>
+
+  <div class="box dark ca1 rg1 three" onclick="pos_program(43);">Apple Juice</div>
+  <div class="box dark cb1 rg1 three" onclick="pos_program(37);">Orange Juice</div>
+
+  <div class="box dark ca1 rh1 three" onclick="pos_program(70);">Kettle Chips Cheddar and Onion</div>
+  <div class="box dark cb1 rh1 three" onclick="pos_program(71);">Kettle Chips Sea Salt and Balsamic</div>
+  <div class="box dark cc1 rh1 two" onclick="pos_program(72);">Kettle Chips Lighly Salted</div>
+  <div class="box dark cd1 rh1 two" onclick="pos_program(65);">Sea Salt Popcorn</div>
+
+  <div class="box dark ca1 ri1 two" onclick="pos_program(66);">Shortbread</div>
+  <div class="box dark cb1 ri1 two" onclick="pos_program(67);">Oat and Rasin Cookie</div>
+  <div class="box dark cc1 ri1 three" onclick="pos_program(68);">Triple Chocolate Cookie</div>
+  <div class="box dark cd1 ri1 two" onclick="pos_program(69);">Piece of Fruit</div>
+
+  <div class="box light ca1 rj1 two" onclick="pos_page(1);">Drinks and Snacks</div>
+  <div class="box light cb1 rj1 two" onclick="pos_page(2);">Sandwiches</div>
+
+  <div class="box red cf1 rb1 one" onclick="pos_clr();">VOID</div>
+  <div class="box green cf1 rc1 one" onclick="pos_tender(2000);">&pound;20</div>
+  <div class="box green cf1 rd1 one" onclick="pos_tender(1000);">&pound;10</div>
+  <div class="box green cf1 re1 one" onclick="pos_tender(500);">&pound;5</div>
+  <div class="box green cf1 rf1 one" onclick="pos_tender(100);">&pound;1</div>
+  <div class="box dark cf1 rg1 one">&nbsp;</div>
+  <div class="box dark cf1 rh1 one" onclick="pos_refund();">REFUND</div>
+  <div class="box dark cf1 ri1 one" onclick="pos_num();">NUM</div>
+  <div class="box dark cf1 rj1 one" onclick="pos_plu();">PLU</div>
+
+  <div class="lbox light cg4 rb4 left"><div class="target" id="target"></div><div class="rstate2" id="rstate2"></div><div class="lstate1" id="lstate1"></div><div class="lstate2" id="lstate2"></div></div>
+  <div class="rbox light cg4 rf1"><input class="ins" id="ins" onkeydown="if(event.keyCode==13){pos_plu()};"></input></div>
+
+  <div class="box mid cg1 rg1 big" onclick="pos_digit(7);">7</div>
+  <div class="box mid cg1 rh1 big" onclick="pos_digit(4);">4</div>
+  <div class="box mid cg1 ri1 big" onclick="pos_digit(1);">1</div>
+  <div class="box mid cg1 rj1 big" onclick="pos_point();">.</div>
+
+
+  <div class="box mid ch1 rg1 big" onclick="pos_digit(8);">8</div>
+  <div class="box mid ch1 rh1 big" onclick="pos_digit(5);">5</div>
+  <div class="box mid ch1 ri1 big" onclick="pos_digit(2);">2</div>
+  <div class="box mid ch1 rj1 big" onclick="pos_digit(0);">0</div>
+
+  <div class="box mid ci1 rg1 big" onclick="pos_digit(9);">9</div>
+  <div class="box mid ci1 rh1 big" onclick="pos_digit(6);">6</div>
+  <div class="box mid ci1 ri1 big" onclick="pos_digit(3);">3</div>
+  <div class="box mid ci1 rj1 big" onclick="pos_digit(100);">00</div>
+
+  <div class="box yellow cj1 rg1 one" onclick="pos_local_clr();">CLR</div>
+  <div class="box green cj1 rh1 one" onclick="pos_cash(3);">CREDIT</div>
+  <div class="box green cj1 ri1 one" onclick="pos_cash(2);">DEBIT</div>
+  <div class="box green cj1 rj1 one" onclick="pos_cash(1);">CASH</div>
+</div>
+</body>
+</html>
